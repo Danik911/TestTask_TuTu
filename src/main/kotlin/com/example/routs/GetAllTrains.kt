@@ -10,14 +10,14 @@ import org.koin.ktor.ext.inject
 
 fun Routing.getAllTrains() {
 
-    val heroRepository: TrainRepository by inject()
+    val trainRepository: TrainRepository by inject()
 
     get("/tutu/trains") {
         try {
             val page = call.request.queryParameters["page"]?.toInt() ?: 1
             require(page in 1..3)
 
-            val apiResponse = heroRepository.getAllTrains(page = page)
+            val apiResponse = trainRepository.getAllTrains(page = page)
 
             call.respond(
                 message = apiResponse,
