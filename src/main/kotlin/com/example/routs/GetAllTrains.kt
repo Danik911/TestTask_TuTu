@@ -2,10 +2,10 @@ package com.example.routs
 
 import com.example.models.ApiResponse
 import com.example.repository.TrainRepository
+import io.ktor.application.*
 import io.ktor.http.*
-import io.ktor.server.application.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
+import io.ktor.response.*
+import io.ktor.routing.*
 import org.koin.ktor.ext.inject
 
 fun Routing.getAllTrains() {
