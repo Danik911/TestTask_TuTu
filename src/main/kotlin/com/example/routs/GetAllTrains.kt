@@ -13,6 +13,7 @@ fun Routing.getAllTrains() {
     val trainRepository: TrainRepository by inject()
 
     get("/tutu/trains") {
+
         try {
             val page = call.request.queryParameters["page"]?.toInt() ?: 1
             require(page in 1..3)
