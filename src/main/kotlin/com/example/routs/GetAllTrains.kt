@@ -8,11 +8,13 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import org.koin.ktor.ext.inject
 
-fun Routing.getAllTrains() {
+fun Routing.getAllTrains(app: Application) {
 
     val trainRepository: TrainRepository by inject()
 
     get("/tutu/trains") {
+
+        app.log.info("GET ALL HEROES CALLED")
 
         try {
             val page = call.request.queryParameters["page"]?.toInt() ?: 1
