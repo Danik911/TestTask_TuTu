@@ -1,1 +1,1 @@
-web: build/install/com.example.ktor-test-server/bin/com.example.ktor-test-server
+web: build/install/com.example.ktor-test-task-server/bin/com.example.ktor-test-task-server
